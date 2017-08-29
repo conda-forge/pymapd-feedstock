@@ -1,6 +1,6 @@
 {% set name = "pymapd" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "e313dc9eea32e9fa0d56406ba6006b509fdb5a8acb7021008535d1cb3521be1a" %}
+{% set version = "0.2.1" %}
+{% set sha256 = "efa0112877d190c5d3db0f1174e3574719e81a67882a34962204781ee232792c" %}
 
 
 package:
