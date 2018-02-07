@@ -1,6 +1,6 @@
 {% set name = "pymapd" %}
-{% set version = "0.3.1" %}
-{% set sha256 = "686ea897c54db33485af221ea1eea3dc45e7bfb5ea1ac738de84de295fd25277" %}
+{% set version = "0.3.2" %}
+{% set sha256 = "644db2a22d981e6761a729260751d43cd8a8a1d40ee9e3ae4e3e25d82fe8196b" %}
 
 
 package:
@@ -26,7 +26,7 @@ requirements:
     - setuptools_scm
     - cython
     - numpy 1.11.*
-    - arrow-cpp >=0.5.0
+    - arrow-cpp 0.7.*
     - pyarrow >=0.5.0
   run:
     - python
@@ -37,7 +37,7 @@ requirements:
     - pandas
     - six
     - sqlalchemy
-    - thrift
+    - thrift 0.10.0
 
 test:
   imports:
