@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   # No pyarrow pacakges for these builds:
   skip: true  # [win32]
   skip: true  # [win and py<35]
@@ -21,17 +21,19 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
     - setuptools
     - setuptools_scm
     - cython
-    - numpy 1.11.*
+    - numpy
     - arrow-cpp 0.7.*
     - pyarrow 0.7.*
   run:
     - python
     - setuptools
-    - numpy >=1.11.*
+    - {{ pin_compatible('numpy') }}
     - arrow-cpp 0.7.*
     - pyarrow 0.7.*
     - pandas
