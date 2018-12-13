@@ -27,16 +27,15 @@ requirements:
     - pip
     - setuptools_scm
     - cython
-    - numpy 1.14.*
-    - arrow-cpp 0.11.*
-    - pyarrow 0.11.*
+    - numpy 1.12.*
+    - arrow-cpp 0.10.*
+    - pyarrow 0.10.*
   run:
     - python
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - numpy >=1.12.*
-    - arrow-cpp 0.11.*
-    - pyarrow 0.11.*
+    - arrow-cpp 0.10.*
+    - pyarrow 0.10.*
     - pandas
     - six
     - sqlalchemy
