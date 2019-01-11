@@ -1,6 +1,5 @@
 {% set name = "pymapd" %}
-{% set version = "0.6.0" %}
-{% set sha256 = "461f9a8e428c5f3e82be3914658cebbd55ad1af86803a31dae817126309fc814" %}
+{% set version = "0.7.0" %}
 
 
 package:
@@ -10,13 +9,13 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 7fee033466ce38731912b88f7ee8a7c55cf24fa5b231c9f954d6f6bea0e6e89b
 
 build:
   number: 1000
   # No pyarrow pacakges for these builds:
   skip: true  # [win and vc<14]
-  script: "{{ PYTHON }} -m pip install . -vvv"
+  script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed . -vvv"
 
 requirements:
   build:
@@ -26,7 +25,7 @@ requirements:
     - python
     - pip
     - setuptools_scm
-    - numpy 1.12.*
+    - numpy 1.14.*
     - arrow-cpp 0.11.*
     - pyarrow 0.11.*
   run:
