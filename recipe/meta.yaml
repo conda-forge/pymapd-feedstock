@@ -12,7 +12,7 @@ source:
   sha256: 7fee033466ce38731912b88f7ee8a7c55cf24fa5b231c9f954d6f6bea0e6e89b
 
 build:
-  number: 1000
+  number: 1001
   # No pyarrow pacakges for these builds:
   skip: true  # [win and vc<14]
   script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed . -vvv"
@@ -26,14 +26,14 @@ requirements:
     - pip
     - setuptools_scm
     - numpy 1.14.*
-    - arrow-cpp 0.11.*
-    - pyarrow 0.11.*
+    - arrow-cpp >=0.10
+    - pyarrow >=0.10
   run:
     - python
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - arrow-cpp 0.11.*
-    - pyarrow 0.11.*
+    - arrow-cpp >=0.10
+    - pyarrow >=0.10
     - pandas
     - six
     - sqlalchemy
@@ -45,7 +45,7 @@ test:
     - mapd
 
 about:
-  home: http://github.com/mapd/pymapd
+  home: http://github.com/omnisci/pymapd
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.md
@@ -53,7 +53,7 @@ about:
   description: |
     A python DB API 2 compatible client for mapd.
   doc_url: https://pymapd.readthedocs.io
-  dev_url: https://github.com/mapd/pymapd
+  dev_url: https://github.com/omnisci/pymapd
 
 extra:
   recipe-maintainers:
