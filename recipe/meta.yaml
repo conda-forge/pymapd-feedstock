@@ -12,27 +12,21 @@ source:
   sha256: 7fee033466ce38731912b88f7ee8a7c55cf24fa5b231c9f954d6f6bea0e6e89b
 
 build:
-  number: 1000
-  # No pyarrow pacakges for these builds:
-  skip: true  # [win and vc<14]
+  number: 1001
+  noarch: python
   script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed . -vvv"
 
 requirements:
-  build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
   host:
     - python
     - pip
     - setuptools_scm
     - numpy 1.14.*
-    - arrow-cpp 0.11.*
     - pyarrow 0.11.*
   run:
     - python
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - arrow-cpp 0.11.*
     - pyarrow 0.11.*
     - pandas
     - six

@@ -1,19 +1,11 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 build_number_decrement:
-- '1000'
-c_compiler:
-- toolchain_c
+- '0'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
-cxx_compiler:
-- toolchain_cxx
-macos_machine:
-- x86_64-apple-darwin13.4.0
-macos_min_version:
-- '10.9'
+docker_image:
+- condaforge/linux-anvil-comp7
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -21,8 +13,7 @@ pin_run_as_build:
 python:
 - '2.7'
 zip_keys:
-- - c_compiler
-  - cxx_compiler
-  - channel_sources
+- - channel_sources
   - channel_targets
+  - docker_image
   - build_number_decrement
