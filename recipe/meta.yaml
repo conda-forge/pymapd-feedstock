@@ -28,8 +28,8 @@ requirements:
     - python
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - arrow-cpp >=0.10
-    - pyarrow >=0.10
+    - arrow-cpp >=0.10,<0.12
+    - pyarrow >=0.10,<0.12
     - pandas
     - six
     - sqlalchemy
