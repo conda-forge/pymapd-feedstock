@@ -12,7 +12,7 @@ source:
   sha256: 5ef38dd1e5c51dccefbf603749dea5bd21e85651a63f3b910bb9eefff75ad356
 
 build:
-  number: 1000
+  number: 1001
   noarch: python
   script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed . -vvv"
 
@@ -22,13 +22,11 @@ requirements:
     - pip
     - setuptools_scm
     - numpy 1.14.*
-    - arrow-cpp >=0.10
     - pyarrow >=0.10
   run:
     - python
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - arrow-cpp >=0.10,<0.12
     - pyarrow >=0.10,<0.12
     - pandas
     - six
