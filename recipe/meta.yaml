@@ -22,13 +22,11 @@ requirements:
     - pip
     - setuptools_scm
     - numpy 1.14.*
-    - arrow-cpp
     - pyarrow >=0.10
   run:
     - python
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - arrow-cpp
     - pyarrow >=0.10,<0.12
     - pandas
     - six
