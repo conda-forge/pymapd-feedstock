@@ -1,5 +1,5 @@
 {% set name = "pymapd" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 
 
 package:
@@ -9,25 +9,25 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5ef38dd1e5c51dccefbf603749dea5bd21e85651a63f3b910bb9eefff75ad356
+  sha256: 122ae15e3424d21a04ad771f6b097f7e30a847b377cf309f52e3b96fe698990b
 
 build:
-  number: 1001
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed . -vvv"
 
 requirements:
   host:
-    - python
+    - python >=3
     - pip
     - setuptools_scm
     - numpy 1.14.*
     - pyarrow >=0.10
   run:
-    - python
+    - python >=3
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - pyarrow >=0.10,<0.12
+    - pyarrow >=0.10,<0.13
     - pandas
     - six
     - sqlalchemy
