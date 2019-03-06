@@ -18,13 +18,13 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3
     - pip
     - setuptools_scm
     - numpy 1.14.*
     - pyarrow >=0.10
   run:
-    - python
+    - python >=3
     - setuptools
     - {{ pin_compatible('numpy') }}
     - pyarrow >=0.10,<0.13
