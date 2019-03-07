@@ -118,4 +118,5 @@ Feedstock Maintainers
 * [@andrewseidl](https://github.com/andrewseidl/)
 * [@randyzwitch](https://github.com/randyzwitch/)
 * [@xhochy](https://github.com/xhochy/)
+* [@xmnlab](https://github.com/xmnlab/)
 
