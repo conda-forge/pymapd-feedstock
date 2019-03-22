@@ -28,7 +28,7 @@ requirements:
     - setuptools
     - {{ pin_compatible('numpy') }}
     - pyarrow >=0.10,<0.13
-    - pandas >= 0.24
+    - pandas >=0.24
     - six
     - sqlalchemy >=1.3
     - thrift 0.11.*
