@@ -39,6 +39,9 @@ test:
   imports:
     - pymapd
     - mapd
+    - common
+    - completion_hints
+    - serialized_result_set
 
 about:
   home: http://github.com/omnisci/pymapd
