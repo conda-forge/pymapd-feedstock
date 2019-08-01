@@ -38,7 +38,11 @@ requirements:
 test:
   imports:
     - pymapd
-    - mapd
+    - omnisci
+    - omnisci.serialized_result_set
+    - omnisci.mapd
+    - omnisci.completion_hints
+    - omnisci.common
 
 about:
   home: http://github.com/omnisci/pymapd
