@@ -1,5 +1,5 @@
 {% set name = "pymapd" %}
-{% set version = "0.13.0" %}
+{% set version = "0.15.0" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7066f568532e0a4e4834b0dbca0d611575db9be23afeb88d77d2906f0baf01c7
+  sha256: 997327efa40e4c6c0998e0c94daf097ac0527cef6e11c775955ea9a2ef56a025
 
 build:
   number: 0
@@ -38,7 +38,11 @@ requirements:
 test:
   imports:
     - pymapd
-    - mapd
+    - omnisci
+    - omnisci.serialized_result_set
+    - omnisci.mapd
+    - omnisci.completion_hints
+    - omnisci.common
 
 about:
   home: http://github.com/omnisci/pymapd
