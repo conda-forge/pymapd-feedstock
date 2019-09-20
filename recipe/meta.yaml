@@ -22,13 +22,13 @@ requirements:
     - pip
     - setuptools_scm
     - numpy >=1.16
-    - pyarrow >=0.10
+    - pyarrow >=0.12,<0.14
     - packaging >=19.0
   run:
     - python >=3
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - pyarrow >=0.10,<0.14
+    - pyarrow >=0.12,<0.14
     - pandas >=0.24
     - six
     - sqlalchemy >=1.3
