@@ -1,5 +1,5 @@
 {% set name = "pymapd" %}
-{% set version = "0.15.0" %}
+{% set version = "0.16.0" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 997327efa40e4c6c0998e0c94daf097ac0527cef6e11c775955ea9a2ef56a025
+  sha256: aa8156554502d1c33cc1bfcf9516ff201021d08b075fff82dc0c6ec2778df388
 
 build:
   number: 0
@@ -22,13 +22,13 @@ requirements:
     - pip
     - setuptools_scm
     - numpy >=1.16
-    - pyarrow >=0.10
+    - pyarrow >=0.12,<0.14
     - packaging >=19.0
   run:
     - python >=3
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - pyarrow >=0.10,<0.14
+    - pyarrow >=0.12,<0.14
     - pandas >=0.24
     - six
     - sqlalchemy >=1.3
