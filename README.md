@@ -118,8 +118,9 @@ Feedstock Maintainers
 =====================
 
 * [@TomAugspurger](https://github.com/TomAugspurger/)
+* [@alexbaden](https://github.com/alexbaden/)
 * [@andrewseidl](https://github.com/andrewseidl/)
-* [@randyzwitch](https://github.com/randyzwitch/)
+* [@jclay](https://github.com/jclay/)
 * [@xhochy](https://github.com/xhochy/)
 * [@xmnlab](https://github.com/xmnlab/)
 
