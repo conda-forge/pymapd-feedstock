@@ -24,7 +24,7 @@ requirements:
     - numpy >=1.16
     - pyarrow ==0.15.0
     - packaging >=20.0
-    - rbc
+    - rbc ==0.2.2
   run:
     - python >=3
     - setuptools
@@ -36,6 +36,7 @@ requirements:
     - thrift 0.13.*
     - packaging >=20.0
     - rbc ==0.2.2
+    - requests
 
 test:
   imports:
