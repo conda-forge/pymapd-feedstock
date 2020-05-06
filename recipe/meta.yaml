@@ -43,7 +43,7 @@ test:
     - pymapd
     - omnisci
     - omnisci.serialized_result_set
-    - omnisci.mapd
+    - omnisci.thrift
     - omnisci.completion_hints
     - omnisci.common
 
@@ -52,9 +52,9 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.md
-  summary: A python DB API 2 compatible client for mapd.
+  summary: A python DB API 2 compatible client for OmniSci (formerly MapD).
   description: |
-    A python DB API 2 compatible client for mapd.
+    A python DB API 2 compatible client for OmniSci (formerly MapD).
   doc_url: https://pymapd.readthedocs.io
   dev_url: https://github.com/omnisci/pymapd
 
