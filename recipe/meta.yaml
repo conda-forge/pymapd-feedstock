@@ -1,5 +1,5 @@
 {% set name = "pymapd" %}
-{% set version = "0.21.0" %}
+{% set version = "0.22.0" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b25c604247bba7601a49247316d4471d5268701b64d1a8a1b29b7d61b8bf7e49
+  sha256: dd23d76247349fde3611512f054ef98e0d73c2531fd0f7a81b62a85fa5e097ec
 
 build:
   number: 0
@@ -22,27 +22,28 @@ requirements:
     - pip
     - setuptools_scm
     - numpy >=1.16
-    - pyarrow >=0.12,<0.14
+    - pyarrow ==0.15.0
     - packaging >=20.0
-    - rbc
+    - rbc ==0.2.2
   run:
     - python >=3
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - pyarrow >=0.12,<0.14
-    - pandas >=1.0,<2.0
+    - pyarrow ==0.15.0
+    - pandas >=0.25,<0.26
     - six
     - sqlalchemy >=1.3
-    - thrift 0.11.*
+    - thrift 0.13.*
     - packaging >=20.0
-    - rbc
+    - rbc ==0.2.2
+    - requests
 
 test:
   imports:
     - pymapd
     - omnisci
     - omnisci.serialized_result_set
-    - omnisci.mapd
+    - omnisci.thrift
     - omnisci.completion_hints
     - omnisci.common
 
@@ -51,9 +52,9 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE.md
-  summary: A python DB API 2 compatible client for mapd.
+  summary: A python DB API 2 compatible client for OmniSci (formerly MapD).
   description: |
-    A python DB API 2 compatible client for mapd.
+    A python DB API 2 compatible client for OmniSci (formerly MapD).
   doc_url: https://pymapd.readthedocs.io
   dev_url: https://github.com/omnisci/pymapd
 
