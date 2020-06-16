@@ -7,9 +7,9 @@ Package license: Apache-2.0
 
 Feedstock license: BSD 3-Clause
 
-Summary: A python DB API 2 compatible client for mapd.
+Summary: A python DB API 2 compatible client for OmniSci (formerly MapD).
 
-A python DB API 2 compatible client for mapd.
+A python DB API 2 compatible client for OmniSci (formerly MapD).
 
 
 Current build status
