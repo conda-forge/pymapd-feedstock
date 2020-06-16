@@ -1,5 +1,5 @@
 {% set name = "pymapd" %}
-{% set version = "0.22.0" %}
+{% set version = "0.23.0" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dd23d76247349fde3611512f054ef98e0d73c2531fd0f7a81b62a85fa5e097ec
+  sha256: 456a430c88eb2c94c549922df64ba6266d906a5107fd09bdc64ca16c62315173
 
 build:
   number: 0
