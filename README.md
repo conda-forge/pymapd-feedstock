@@ -5,9 +5,13 @@ Home: http://github.com/omnisci/pymapd
 
 Package license: Apache-2.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pymapd-feedstock/blob/master/LICENSE.txt)
 
 Summary: A python DB API 2 compatible client for OmniSci (formerly MapD).
+
+Development: https://github.com/omnisci/pymapd
+
+Documentation: https://pymapd.readthedocs.io
 
 A python DB API 2 compatible client for OmniSci (formerly MapD).
 

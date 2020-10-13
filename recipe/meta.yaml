@@ -1,5 +1,5 @@
 {% set name = "pymapd" %}
-{% set version = "0.24.1" %}
+{% set version = "0.24.2" %}
 
 
 package:
@@ -9,10 +9,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 00bc325943343df59f0c775c11bd86606cbcc3d20a4391a32c8bac58b6926623
+  sha256: 6cb3ac3555e1f3c79f6b6c313602aa43f6efc68cb71bc296dad37ba04e7acb3f
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed . -vvv
 
