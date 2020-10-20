@@ -12,7 +12,7 @@ source:
   sha256: 6cb3ac3555e1f3c79f6b6c313602aa43f6efc68cb71bc296dad37ba04e7acb3f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed . -vvv
 
@@ -22,14 +22,14 @@ requirements:
     - pip
     - setuptools_scm
     - numpy >=1.16
-    - pyarrow ==0.15.0.*
+    - pyarrow ==0.15.*
     - packaging >=20.0
     - rbc ==0.2.2
   run:
     - python >=3
     - setuptools
     - {{ pin_compatible('numpy') }}
-    - pyarrow ==0.15.0.*
+    - pyarrow ==0.15.*
     - pandas >=0.25,<0.26
     - six
     - shapely
