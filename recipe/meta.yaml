@@ -21,7 +21,7 @@ requirements:
     - python >=3
     - pip
     - setuptools_scm
-    - numpy
+    - numpy >=1.16
     - pyarrow 0.15.*
     - packaging >=20.0
     - rbc 0.2.2
