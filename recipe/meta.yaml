@@ -12,7 +12,7 @@ source:
   sha256: 6cb3ac3555e1f3c79f6b6c313602aa43f6efc68cb71bc296dad37ba04e7acb3f
 
 build:
-  number: 2
+  number: 3
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed . -vvv
 
@@ -24,7 +24,7 @@ requirements:
     - numpy
     - pyarrow 0.15.*
     - packaging >=20.0
-    - rbc 0.2.2
+    - rbc
   run:
     - python >=3
     - setuptools
@@ -36,7 +36,7 @@ requirements:
     - sqlalchemy >=1.3
     - thrift 0.13.*
     - packaging >=20.0
-    - rbc 0.2.2
+    - rbc
     - requests
 
 test:
