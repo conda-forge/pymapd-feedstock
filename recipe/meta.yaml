@@ -22,7 +22,7 @@ requirements:
     - pip
     - setuptools_scm
     - numpy
-    - pyarrow <= 2.0
+    - pyarrow <=2.0
     - packaging >=20.0
     - rbc
   run:
@@ -33,7 +33,7 @@ requirements:
     # upper-bound to what omniscidb supports
     # cudf 0.15 will constraint this to 0.17
     # if it is installed.
-    - pyarrow<=2.0
+    - pyarrow <=2.0
     - pandas
     - shapely
     - sqlalchemy >=1.3
