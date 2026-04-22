@@ -8,17 +8,17 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 26426b06716caa3d6b2fe3351dd1aaa23f633203c5d4e02dbc1e4388eabc646a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed . -vvv
 
 requirements:
   host:
-    - python >=3.7,<3.9
+    - python {{ python_min }}
     - pip
     - setuptools_scm
     - numpy
@@ -26,7 +26,7 @@ requirements:
     - packaging >=20.0
     - rbc
   run:
-    - python >=3.7,<3.9
+    - python >={{ python_min }},<3.9
     - setuptools
     - numba
     - {{ pin_compatible('numpy') }}
@@ -43,6 +43,8 @@ requirements:
     - requests >=2.23.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pymapd
     - omnisci
